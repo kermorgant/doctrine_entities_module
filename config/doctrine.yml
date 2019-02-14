@@ -1,0 +1,10 @@
+# Doctrine Configuration
+doctrine:
+    orm:
+        mappings:
+            DoctrineEntitiesModule:
+                type: xml
+                is_bundle: false
+                dir: "src/Schema/Mapping"
+                prefix: DoctrineEntitiesModule\Entity
+                alias: DoctrineEntitiesModule

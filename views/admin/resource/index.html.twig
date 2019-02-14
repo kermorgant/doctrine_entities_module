@@ -1,0 +1,33 @@
+{% extends '@PrestaShop/Admin/layout.html.twig' %}
+{#% trans_default_domain "" %#}
+
+{% block content %}
+    <div class="row">
+      <div class="col-xl-10">
+        <div class="card">
+          <h3 class="card-header">
+            <i class="material-icons">resource</i> {{ 'Resources'|trans({}, 'Admin.Global') }}
+          </h3>
+          <div class="card-block row">
+            <div class="card-text">
+              {% for resource in resources %}
+                <li>
+                  <a href="{{ path('doctrineentitiesmodule_admin_resources_edit', {'id': resource.id}) }}">{{ resource.name }}</a>
+                </li>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-end">
+              <a href="{{ path('doctrineentitiesmodule_admin_resources_create')}}" class="btn btn-primary mx-1">{{ 'New Resource'|trans({}, 'Admin.Actions') }}</a>
+              <button class="btn btn-primary">{{ 'Back'|trans({}, 'Admin.Actions') }}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+{% endblock %}

@@ -1,0 +1,15 @@
+{
+    "name": "DoctrineEntitiesModule",
+    "author": "Mikael Kermorgant",
+    "require": {
+        "php": ">=7.2.0",
+        "myclabs/php-enum": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "DoctrineEntitiesModule\\": "src/"
+        },
+        "exclude-from-classmap": []
+    },
+    "type": "prestashop-module"
+}

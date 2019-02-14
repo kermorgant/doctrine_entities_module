@@ -1,0 +1,11 @@
+<div class="card-block row">
+  <div class="card-text">
+    <div class="form-group row">
+      {{ ps.label_with_help(('Name'|trans), ('What is the resource name ?'|trans({}, 'todo'))) }}
+      <div class="col-sm">
+        {{ form_errors(form.name) }}
+        {{ form_widget(form.name) }}
+      </div>
+    </div>
+  </div>
+</div>

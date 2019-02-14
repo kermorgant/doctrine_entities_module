@@ -1,0 +1,36 @@
+doctrineentitiesmodule_admin_config:
+    path: doctrine-entities-module/config
+    methods: [GET]
+    defaults:
+        _controller: 'DoctrineEntitiesModule\Controller\Admin\ModuleConfigController::index'
+         # small hack to make Modules active on side menu when our page is rendered
+        _legacy_controller: AdminModules
+
+doctrineentitiesmodule_admin_config_process:
+    path: doctrine-entities-module/config
+    methods: [POST]
+    defaults:
+        _controller: 'DoctrineEntitiesModule\Controller\Admin\ModuleConfigController::process'
+         # small hack to make Modules active on side menu when our page is rendered
+        _legacy_controller: AdminModules
+
+doctrineentitiesmodule_admin_resources:
+    path: doctrine-entities-module/config/resources
+    methods: [GET]
+    defaults:
+        _controller: 'DoctrineEntitiesModule\Controller\Admin\ResourceManagementController::index'
+        _legacy_controller: ShopParameters
+
+doctrineentitiesmodule_admin_resources_create:
+    path: doctrine-entities-module/config/resources/create
+    methods: [GET, POST]
+    defaults:
+        _controller: 'DoctrineEntitiesModule\Controller\Admin\ResourceManagementController::create'
+        _legacy_controller: ShopParameters
+
+doctrineentitiesmodule_admin_resources_edit:
+    path: doctrine-entities-module/config/resources/{id}/edit
+    methods: [GET, POST]
+    defaults:
+        _controller: 'DoctrineEntitiesModule\Controller\Admin\ResourceManagementController::edit'
+        _legacy_controller: ShopParameters
